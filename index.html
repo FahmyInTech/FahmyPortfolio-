@@ -298,22 +298,47 @@
     <section id="contact" class="py-16 px-6 bg-slate-800/50">
         <div class="max-w-3xl mx-auto" data-aos="fade-up">
             <h2 class="text-3xl font-bold mb-8 text-center">Get in Touch</h2>
-            <form  name="contact" method="post"  data-netlify="true" class="space-y-6" >
+            <form 
+                name="contact" 
+                method="POST" 
+                data-netlify="true" 
+                class="space-y-6"
+                action="/success.html"
+            >
                 <input type="hidden" name="form-name" value="contact">
+                <input type="hidden" name="_redirect" value="/success.html">
+                
                 <div>
-                    <input type="text" name="name" placeholder="Your Name" 
-                           class="w-full p-3 bg-slate-700 rounded-lg focus:outline-none focus:ring-2 focus:ring-primary">
+                    <input 
+                        type="text" 
+                        name="name" 
+                        placeholder="Your Name" 
+                        class="w-full p-3 bg-slate-700 rounded-lg focus:outline-none focus:ring-2 focus:ring-primary"
+                        required
+                    >
                 </div>
+                
                 <div>
-                    <input type="email" name="email" placeholder="Your Email" 
-                           class="w-full p-3 bg-slate-700 rounded-lg focus:outline-none focus:ring-2 focus:ring-primary">
+                    <input 
+                        type="email" 
+                        name="email" 
+                        placeholder="Your Email" 
+                        class="w-full p-3 bg-slate-700 rounded-lg focus:outline-none focus:ring-2 focus:ring-primary"
+                        required
+                    >
                 </div>
+                
                 <div>
-                    <textarea name="message" rows="5" placeholder="Your Message" 
-                              class="w-full p-3 bg-slate-700 rounded-lg focus:outline-none focus:ring-2 focus:ring-primary"></textarea>
+                    <textarea 
+                        name="message" 
+                        rows="5" 
+                        placeholder="Your Message" 
+                        class="w-full p-3 bg-slate-700 rounded-lg focus:outline-none focus:ring-2 focus:ring-primary"
+                        required
+                    ></textarea>
                 </div>
-                <button type="submit" 
-                        class="btn-primary w-full">
+                
+                <button type="submit" class="btn-primary w-full">
                     Send Message
                 </button>
             </form>
