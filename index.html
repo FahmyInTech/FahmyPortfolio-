@@ -298,17 +298,18 @@
     <section id="contact" class="py-16 px-6 bg-slate-800/50">
         <div class="max-w-3xl mx-auto" data-aos="fade-up">
             <h2 class="text-3xl font-bold mb-8 text-center">Get in Touch</h2>
-            <form class="space-y-6" netlify>
+            <form class="space-y-6" netlify name="contact">
+                <input type="hidden" name="form-name" value="contact">
                 <div>
-                    <input type="text" placeholder="Your Name" 
+                    <input type="text" name="name" placeholder="Your Name" 
                            class="w-full p-3 bg-slate-700 rounded-lg focus:outline-none focus:ring-2 focus:ring-primary">
                 </div>
                 <div>
-                    <input type="email" placeholder="Your Email" 
+                    <input type="email" name="email" placeholder="Your Email" 
                            class="w-full p-3 bg-slate-700 rounded-lg focus:outline-none focus:ring-2 focus:ring-primary">
                 </div>
                 <div>
-                    <textarea rows="5" placeholder="Your Message" 
+                    <textarea name="message" rows="5" placeholder="Your Message" 
                               class="w-full p-3 bg-slate-700 rounded-lg focus:outline-none focus:ring-2 focus:ring-primary"></textarea>
                 </div>
                 <button type="submit" 
@@ -318,6 +319,8 @@
             </form>
         </div>
     </section>
+    
+    
 
     <!-- Footer -->
     <footer class="bg-slate-800 py-8 mt-16">
