@@ -298,7 +298,7 @@
     <section id="contact" class="py-16 px-6 bg-slate-800/50">
         <div class="max-w-3xl mx-auto" data-aos="fade-up">
             <h2 class="text-3xl font-bold mb-8 text-center">Get in Touch</h2>
-            <form class="space-y-6" netlify name="contact">
+            <form  name="contact" method="post"  data-netlify="true" class="space-y-6" >
                 <input type="hidden" name="form-name" value="contact">
                 <div>
                     <input type="text" name="name" placeholder="Your Name" 
@@ -381,11 +381,12 @@
         });
 
         // Form submission handling
-        document.querySelector('form').addEventListener('submit', (e) => {
-            e.preventDefault();
-            alert('Thank you for your message! I will respond shortly.');
-            e.target.reset();
-        });
+        document.querySelector('form').addEventListener('submit', () => {
+    setTimeout(() => {
+        alert('Thank you for your message! I will respond shortly.');
+    }, 1000); 
+});
+      
     </script>
 </body>
 </html>
